@@ -7,13 +7,8 @@ func ShorterLength(a, b string) int {
 	   Falls a kürzer ist als b, geben Sie die Länge von a zurück,
 	   ansonsten die Länge von b.
 	*/
-	// tag::solution[]
-	if len(a) < len(b) {
-		return len(a)
-	}
-	return len(b)
-	// end::solution[]
-	// iftask: return 0
+	// TODO
+	return 0
 }
 
 // LongerLength erwartet zwei Strings und gibt die Länge des längeren zurück.
@@ -21,13 +16,8 @@ func LongerLength(a, b string) int {
 	/* Hinweis
 	   Gehen Sie analog zu ShorterLength vor.
 	*/
-	// tag::solution[]
-	if len(a) > len(b) {
-		return len(a)
-	}
-	return len(b)
-	// end::solution[]
-	// iftask: return 0
+	// TODO
+	return 0
 }
 
 // DifferenceCount erwartet zwei Strings und gibt die Anzahl der
@@ -43,17 +33,7 @@ func DifferenceCount(a, b string) int {
 	   Vergleichen Sie die Zeichen an der aktuellen Position
 	   und falls sie sich unterscheiden, erhöhen Sie count.
 	*/
-	// tag::solution[]
-	shorterlen := ShorterLength(a, b)
-	longerlen := LongerLength(a, b)
-	lendiff := longerlen - shorterlen
-	count += lendiff
-	for i := 0; i < shorterlen; i++ {
-		if a[i] != b[i] {
-			count++
-		}
-	}
-	// end::solution[]
+	// TODO
 	return count
 }
 
@@ -63,10 +43,8 @@ func PositionIsValid(s string, pos int) bool {
 	/* Hinweis
 	   Prüfen Sie, ob pos größer oder gleich 0 ist und kleiner als die Länge des Strings ist.
 	*/
-	// tag::solution[]
-	return pos >= 0 && pos < len(s)
-	// end::solution[]
-	// iftask: return false
+	// TODO
+	return false
 }
 
 // SwitchPositions erwartet einen String und zwei Positionen.
@@ -81,13 +59,6 @@ func SwitchPositions(s string, pos1, pos2 int) string {
 	   In diesem Array können Sie dann die Zeichen an den Positionen vertauschen
 	   und es als String zurückgeben.
 	*/
-	// tag::solution[]
-	if !PositionIsValid(s, pos1) || !PositionIsValid(s, pos2) {
-		return s
-	}
-	b := []byte(s)
-	b[pos1], b[pos2] = b[pos2], b[pos1]
-	return string(b)
-	// end::solution[]
-	// iftask: return ""
+	// TODO
+	return ""
 }

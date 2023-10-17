@@ -1,11 +1,5 @@
 package stringcomp
 
-import (
-	"strings"
-
-	"github.com/wwi23ama-prog/aufgaben_string_analyse/stringhelpers"
-)
-
 // AtMostNDifferences erwartet zwei Strings und eine Zahl n.
 // Es gibt true zurück, falls die Strings an höchstens n Stellen
 // voneinander abweichen.
@@ -15,10 +9,8 @@ func AtMostNDifferences(a, b string, n int) bool {
 	/* Hinweis
 	   Benutzen Sie die Funktion DifferenceCount.
 	*/
-	// tag::solution[]
-	return stringhelpers.DifferenceCount(a, b) <= n
-	// end::solution[]
-	// iftask: return false
+	// TODO
+	return false
 }
 
 // StartsWith erwartet zwei Strings a, bund gibt true zurück,
@@ -35,18 +27,8 @@ func StartsWith(a, b string) bool {
 	   an der gleichen Position. Wenn Sie einen Unterschied finden, können
 	   Sie vorzeitig false zurückgeben.
 	*/
-	// tag::solution[]
-	if len(b) > len(a) {
-		return false
-	}
-	for i := 0; i < len(b); i++ {
-		if a[i] != b[i] {
-			return false
-		}
-	}
-	return true
-	// end::solution[]
-	// iftask: return false
+	// TODO
+	return false
 }
 
 // EndsWith erwartet zwei Strings a, bund gibt true zurück,
@@ -56,19 +38,8 @@ func EndsWith(a, b string) bool {
 	   Analog zu StartsWith, aber in a darf nicht am Anfang,
 	   sondern ab der Position len(a)-len(b) verglichen werden.
 	*/
-	// tag::solution[]
-	if len(b) > len(a) {
-		return false
-	}
-	starta := len(a) - len(b)
-	for i := 0; i < len(b); i++ {
-		if a[starta+i] != b[i] {
-			return false
-		}
-	}
-	return true
-	// end::solution[]
-	// iftask: return false
+	// TODO
+	return false
 }
 
 // Contains erwartet zwei Strings a,b und gibt true zurück,
@@ -79,16 +50,7 @@ func Contains(a, b string) bool {
 	   Ansonsten schneiden Sie so lange Zeichen vom Anfang von a ab,
 	   bis es mit b anfängt oder leer ist.
 	*/
-	// tag::solution[]
-	if len(b) > len(a) {
-		return false
-	}
-	for len(a) >= len(b) {
-		if StartsWith(a, b) {
-			return true
-		}
-		a = a[1:]
-	}
+	// TODO
 	return false
 }
 
@@ -100,12 +62,8 @@ func EqualCaseInsensitive(a, b string) bool {
 	   Beachten Sie auch die Hinweise, die die Umgebung zu Ihrer Lösung gibt.
 	   Es gibt ggf. noch eine bessere Lösung als die hier vorgeschlagene.
 	*/
-	// tag::solution[]
-	return strings.EqualFold(a, b)
-	// Alternative passend zu Hinweis:
-	// return strings.ToLower(a) == strings.ToLower(b)
-	// end::solution[]
-	// iftask: return false
+	// TODO
+	return false
 }
 
 // EqualExceptTransposedPositions erwartet zwei Strings a,b und gibt true zurück,
@@ -123,19 +81,8 @@ func EqualExceptTransposedPositions(a, b string) bool {
 	   Vertauschen Sie in jedem Schritt die Zeichen an der aktuellen Position
 	   und der nächsten Position und vergleichen Sie das Ergebnis mit b.
 	*/
-	// tag::solution[]
-	if len(a) != len(b) {
-		return false
-	}
-	for i := 0; i < len(a)-1; i++ {
-		switched := stringhelpers.SwitchPositions(a, i, i+1)
-		if switched == b {
-			return true
-		}
-	}
+	// TODO
 	return false
-	// end::solution[]
-	// iftask: return false
 }
 
 // ContainsScatteredSubstring erwartet zwei Strings a,b und gibt true zurück,
@@ -163,30 +110,6 @@ func ContainsScatteredSubstring(a, b string) bool {
 	   Wenn man aber vorzeitig das Ende von a erreicht,
 	   ist b kein verstreuter Teilstring von a.
 	*/
-	// tag::solution[]
-	if len(b) > len(a) {
-		return false
-	}
-	posa := 0
-	posb := 0
-	for posb < len(b) {
-		// Falls a zu Ende ist, ist b kein verstreuter Teilstring von a.
-		if posa >= len(a) {
-			return false
-		}
-		// Finde nächstes Zeichen von b in a.
-		for a[posa] != b[posb] {
-			posa++
-			// Falls a zu Ende ist, ist b kein verstreuter Teilstring von a.
-			if posa == len(a) {
-				return false
-			}
-		}
-		posa++
-		posb++
-	}
-
-	return true
-	// end::solution[]
-	// iftask: return false
+	// TODO
+	return false
 }
