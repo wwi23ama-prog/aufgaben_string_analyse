@@ -1,0 +1,17 @@
+= String-Ähnlichkeitsanalyse
+
+Die Funktionen in diesem Repo implementieren Funktionalität, die geeignet ist,
+um die Ähnlichkeit von Strings zu bewerten.
+
+== Beispiele
+
+* Herausfinden, ob zwei Strings bis auf Buchstabendreher gleich sind.
+* Herausfinden, ob zwei Strings bis auf Groß-/Kleinschreibung gleich sind.
+* Herausfinden, ob ein String einen anderen als Teilstring enthält.
+* Herausfinden, ob ein String einem anderen bis auf einige Lücken gleicht.
+
+== Anwendung
+
+Solche Funktionen können z.B. in einer Suchfunktion verwendet werden, um
+auch Treffer zu liefern, die nicht exakt dem Suchbegriff entsprechen.
+Solche eine Suche wird auch als _Fuzzy-Suche_ bezeichnet.
